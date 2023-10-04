@@ -1,0 +1,44 @@
+<%-include('header')-%>
+
+<div class="text-center center-div" id="login">
+  <div class="container w-25 py-5">
+    <div class="title pb-5">
+      <h2 class="font-weight-bold">Login System</h2>
+      <!-- <span style="color: rgb(0, 0, 0)" class="fs-5" >
+        <%if(locals.logout){%> <%=logout%> <% } %>      
+      </span -->
+      
+    </div>
+    <form action="/login" method="post" class="pt-3">
+      <div class="form-group text-start">
+        <input
+          type="email"
+          class="form-control"
+          placeholder="email"
+          name="email"
+        />
+
+      </div>
+      <div class="form-group">
+        <input
+          type="password"
+          class="form-control mt-3"
+          name="password"
+          placeholder="password"
+        />
+      </div>
+      <button type="submit" class="btn btn-success rounded-pill m-3">
+        Login
+      </button>
+    </form>
+    
+  </div>
+  
+  <span style="color: rgb(0, 0, 0)" class="fs-5" >
+    <%if(locals.logout){%> <%=logout%> <% } %>      
+  </span
+  
+
+</div>
+
+<%-include('footer')-%>
